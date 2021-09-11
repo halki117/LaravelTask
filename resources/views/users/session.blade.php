@@ -8,6 +8,6 @@
   <form action="">
     <p>E-mail</p><input type="text" name="email">
     <p>Password</p><input type="text" name="password">
-    <input type="submit" value="login">
+    <p><input type="submit" value="login"></p>
   </form>
 @endsection

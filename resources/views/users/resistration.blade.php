@@ -11,6 +11,6 @@
     <p>E-mail</p><input type="text" name="email">
     <p>Password</p><input type="text" name="password">
     <p>Password Confirm</p><input type="text" name="password_confirm">
-    <input type="submit" value="login">
+    <p><input type="submit" value="resister"></p>
   </form>    
 @endsection
