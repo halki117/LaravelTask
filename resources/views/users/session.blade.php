@@ -1,13 +1,30 @@
 @extends('app')
 
 @section('content')
-  <h1>ログイン画面</h1>
-  <a href="{{ route('session') }}">Login</a>
-  <a href="{{ route('resistration')}}">Resister</a>
 
-  <form action="">
-    <p>E-mail</p><input type="text" name="email">
-    <p>Password</p><input type="text" name="password">
-    <p><input type="submit" value="login"></p>
-  </form>
+  @include('users.parts')
+
+  <div class="auth_form">
+    <div class="form_header">
+      <h2>ログイン</h2>
+    </div>
+    <div class="form_body" >
+      <form action="">
+        <ul>
+          <li>
+            <label for="email">E-mail:</label>
+            <input type="text" name="email">
+          </li>
+          <li>
+            <label for="password">Password:</label>
+            <input type="text" name="password">
+          </li>
+          <li>
+            <input type="submit" value="login">
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>
+  
 @endsection
