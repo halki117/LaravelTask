@@ -8,8 +8,18 @@
     <div class="form_header">
       <h2>ユーザー登録</h2>
     </div>
+    @if ($errors->any())
+      <div class="alert alert-danger">
+          <ul>
+              @foreach ($errors->all() as $error)
+                  <li>{{ $error }}</li>
+              @endforeach
+          </ul>
+      </div>
+    @endif
     <div class="form_body">
-      <form action="">
+      <form action="{{ route('signup') }}" method="post">
+        @csrf
         <ul>
           <li>
             <label for="name">Name:</label>

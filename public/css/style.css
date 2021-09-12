@@ -41,3 +41,7 @@ ul {
 .form_header{
   text-align: center;
 }
+
+.alert.alert-danger ul{
+  background-color: darksalmon;
+}

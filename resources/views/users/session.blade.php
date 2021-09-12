@@ -8,8 +8,20 @@
     <div class="form_header">
       <h2>ログイン</h2>
     </div>
+
+    @if ($errors->any())
+      <div class="alert alert-danger">
+          <ul>
+             @foreach ($errors->all() as $error)
+                  <li>{{ $error }}</li>
+              @endforeach
+          </ul>
+      </div>
+    @endif
+    
     <div class="form_body" >
       <form action="">
+        @csrf
         <ul>
           <li>
             <label for="email">E-mail:</label>
