@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/users/resistration', 'UsersController@resistration')->name('resistration');
+
+Route::get('/users/session', 'UsersController@session')->name('session');
