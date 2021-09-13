@@ -7,6 +7,7 @@
       <div class="navlink">
         @if ($current_user['name'])
           <div class="current_user_name">
+          {{-- 　現在ログイン中のユーザー情報を $current_user に格納、こちらは AppServiceProvider.phpで定義している --}}
             <p>{{ $current_user['name'] }}</p>
           </div>
           <div class="logout">
