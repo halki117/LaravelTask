@@ -39,7 +39,7 @@ class UsersController extends Controller
     }
 
     public function session() {
-        return view('users.session');
+        return view('users.session');        
     }
 
     public function login(Request $request) {

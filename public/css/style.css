@@ -45,3 +45,19 @@ ul {
 .alert.alert-danger ul{
   background-color: darksalmon;
 }
+
+
+
+.loggedin_message{
+  text-align: center;
+  margin-top: 50px;
+}
+
+.navlink{
+  padding: 0 50px;
+  display: flex;
+}
+
+.current_user_name{
+  margin-right: 20px;
+}
