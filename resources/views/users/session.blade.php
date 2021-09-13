@@ -18,9 +18,9 @@
           </ul>
       </div>
     @endif
-    
+
     <div class="form_body" >
-      <form action="">
+      <form action="{{ route('login') }}" method="post">
         @csrf
         <ul>
           <li>
