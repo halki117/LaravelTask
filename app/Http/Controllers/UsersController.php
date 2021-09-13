@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SignupRequest;
 use Illuminate\Http\Request;
 
 use App\User;
@@ -14,15 +15,8 @@ class UsersController extends Controller
         return view('users.resistration');
     }
 
-    public function signup(Request $request) {
+    public function signup(SignupRequest $request) {
         
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required',
-            'password' => 'required | min:7',
-            'password_confirm' => 'required | same:password',
-        ]);
-
         $user = new User;
         $user->name = $request->name;
         $user->email = $request->email;
@@ -39,7 +33,7 @@ class UsersController extends Controller
     }
 
     public function session() {
-        return view('users.session');        
+        return view('users.session');
     }
 
     public function login(Request $request) {
