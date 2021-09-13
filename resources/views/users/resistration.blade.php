@@ -1,8 +1,19 @@
 @extends('app')
 
+@section('header')
+    <div class="header">
+      @parent
+
+      <div class="auth_header">
+        <div class="links">
+          <p><a href="{{ route('session') }}">Login</a></p>
+          <p><a href="{{ route('resistration')}}">Resister</a></p>
+        </div>
+      </div>
+    </div>
+@endsection
+
 @section('content')
-  
-  @include('users.parts')
 
   <div class="auth_form">
     <div class="form_header">

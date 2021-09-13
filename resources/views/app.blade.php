@@ -14,6 +14,10 @@
 
     </head>
     <body>
+        @section('header')
+          <div class="title"><h1>LaravelTask</h1></div>
+        @show
+        
         @yield('content')
     </body>
 </html>
