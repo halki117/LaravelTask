@@ -12,9 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('/users/resistration', 'UsersController@resistration')->name('resistration');
-
+Route::post('/users/resistration', 'UsersController@signup')->name('signup');
 Route::get('/users/session', 'UsersController@session')->name('session');
+Route::post('/users/session', 'UsersController@login')->name('login');

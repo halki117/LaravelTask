@@ -1,4 +1,4 @@
-.auth_header{
+.header{
   display: flex;
   justify-content: space-between;
 }
@@ -40,4 +40,24 @@ ul {
 
 .form_header{
   text-align: center;
+}
+
+.alert.alert-danger ul{
+  background-color: darksalmon;
+}
+
+
+
+.loggedin_message{
+  text-align: center;
+  margin-top: 50px;
+}
+
+.navlink{
+  padding: 0 50px;
+  display: flex;
+}
+
+.current_user_name{
+  margin-right: 20px;
 }

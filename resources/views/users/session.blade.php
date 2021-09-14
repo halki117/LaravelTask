@@ -1,15 +1,38 @@
 @extends('app')
 
-@section('content')
+@section('header')
+    <div class="header">
+      @parent
 
-  @include('users.parts')
+      <div class="auth_header">
+        <div class="links">
+          <p><a href="{{ route('session') }}">Login</a></p>
+          <p><a href="{{ route('resistration')}}">Resister</a></p>
+        </div>
+      </div>
+    </div>
+@endsection
+
+@section('content')
 
   <div class="auth_form">
     <div class="form_header">
       <h2>ログイン</h2>
     </div>
+
+    @if ($errors->any())
+      <div class="alert alert-danger">
+          <ul>
+             @foreach ($errors->all() as $error)
+                  <li>{{ $error }}</li>
+              @endforeach
+          </ul>
+      </div>
+    @endif
+
     <div class="form_body" >
-      <form action="">
+      <form action="{{ route('login') }}" method="post">
+        @csrf
         <ul>
           <li>
             <label for="email">E-mail:</label>
