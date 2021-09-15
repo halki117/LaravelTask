@@ -61,3 +61,13 @@ ul {
 .current_user_name{
   margin-right: 20px;
 }
+
+
+
+
+.tasks_container th {
+  padding: 10px 0 15px 15px;
+}
+.tasks_container td {
+  padding: 0 30px;
+}

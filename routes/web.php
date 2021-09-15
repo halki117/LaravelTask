@@ -19,3 +19,6 @@ Route::get('/users/resistration', 'UsersController@resistration')->name('resistr
 Route::post('/users/resistration', 'UsersController@signup')->name('signup');
 Route::get('/users/session', 'UsersController@session')->name('session');
 Route::post('/users/session', 'UsersController@login')->name('login');
+
+
+Route::resource('tasks', 'TasksController');
